@@ -54,6 +54,14 @@ return packer.startup(function(use)
   use("saadparwaiz1/cmp_luasnip") 
   use("rafamadriz/friendly-snippets") 
 
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+  
+  use("hrsh7th/cmp-nvim-lsp")
+
   if packer_bootstrap then
     require("packer").sync()
   end

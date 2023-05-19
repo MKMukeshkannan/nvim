@@ -5,4 +5,6 @@ require("mkmukeshkannan.core.keymaps")
 require("mkmukeshkannan.plugins.nvim-tree")
 require("mkmukeshkannan.plugins.lualine")
 require("mkmukeshkannan.plugins.nvim-cmp")
+require("mkmukeshkannan.plugins.lsp.mason")
+require("mkmukeshkannan.plugins.lsp.lspconfig")
 
