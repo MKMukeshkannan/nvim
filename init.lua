@@ -8,4 +8,6 @@ require("mkmukeshkannan.plugins.nvim-cmp")
 require("mkmukeshkannan.plugins.lsp.mason")
 require("mkmukeshkannan.plugins.lsp.lspsaga")
 require("mkmukeshkannan.plugins.lsp.lspconfig")
-
+require("mkmukeshkannan.plugins.lsp.null-ls")
+require("mkmukeshkannan.plugins.autopair")
+require("mkmukeshkannan.plugins.treesitter")

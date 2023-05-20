@@ -71,6 +71,20 @@ return packer.startup(function(use)
   })
   use("onsails/lspkind.nvim")
 
+  use("jose-elias-alvarez/null-ls.nvim")
+  use("jayp0521/mason-null-ls.nvim")
+
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = function()
+      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+      ts_update()
+    end,
+  })
+
+  use("windwp/nvim-autopairs")
+  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) 
+
   if packer_bootstrap then
     require("packer").sync()
   end
