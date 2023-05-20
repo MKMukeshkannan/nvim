@@ -61,6 +61,15 @@ return packer.startup(function(use)
   }
   
   use("hrsh7th/cmp-nvim-lsp")
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    requires = {
+      { "nvim-tree/nvim-web-devicons" },
+      { "nvim-treesitter/nvim-treesitter" },
+    },
+  })
+  use("onsails/lspkind.nvim")
 
   if packer_bootstrap then
     require("packer").sync()

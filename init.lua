@@ -6,5 +6,6 @@ require("mkmukeshkannan.plugins.nvim-tree")
 require("mkmukeshkannan.plugins.lualine")
 require("mkmukeshkannan.plugins.nvim-cmp")
 require("mkmukeshkannan.plugins.lsp.mason")
+require("mkmukeshkannan.plugins.lsp.lspsaga")
 require("mkmukeshkannan.plugins.lsp.lspconfig")
 
