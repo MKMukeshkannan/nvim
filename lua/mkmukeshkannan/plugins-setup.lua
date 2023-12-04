@@ -28,7 +28,7 @@ return packer.startup(function(use)
   use("nvim-lua/plenary.nvim")
   
   --color scheme
-  use('morhetz/gruvbox')
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   use("christoomey/vim-tmux-navigator")
 
@@ -54,11 +54,17 @@ return packer.startup(function(use)
   use("saadparwaiz1/cmp_luasnip") 
   use("rafamadriz/friendly-snippets") 
 
+  use("kshenoy/vim-signature")
+
   use {
+    "leoluz/nvim-dap-go",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
+    "mfussenegger/nvim-dap",
+    "jay-babu/mason-nvim-dap.nvim",
   }
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   
   use("hrsh7th/cmp-nvim-lsp")
   use({
@@ -84,6 +90,8 @@ return packer.startup(function(use)
 
   use("windwp/nvim-autopairs")
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) 
+
+  use 'mfussenegger/nvim-dap'
 
   if packer_bootstrap then
     require("packer").sync()

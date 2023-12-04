@@ -27,7 +27,7 @@ mason_lspconfig.setup({
         "tailwindcss", 
         "pyright", 
         "marksman",
-
+        "tsserver",
       },
 })
 
@@ -37,3 +37,12 @@ ensure_installed = {
     "eslind_d",
   }
 })
+
+
+require("mason-nvim-dap").setup()
+
+
+require("mason-nvim-dap").setup({
+    ensure_installed = { "python", "codelldb" }
+})
+
